@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L-System - Michał Wójcik</title>
+    <script src="https://unpkg.com/turtle-graphics-js@1.0.1/script.js"></script>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="800"
+      height="600"
+      style="border: 5px solid black"
+    ></canvas>
+    <br />
+    <label for="axiom">Aksjomat</label>
+    <input
+      type="text"
+      name="axiom"
+      id="axiom"
+      placeholder="Aksjomat"
+      value="F++F++F"
+    />
+    <label for="rules">Reguły</label>
+    <input
+      type="text"
+      name="rules"
+      id="rules"
+      placeholder="Reguły"
+      value="F:F-F++F-F"
+    />
+    <label for="length">Długość odcinka</label>
+    <input
+      type="number"
+      min="0"
+      name="length"
+      id="length"
+      placeholder="Długość odcinka"
+      value="10"
+    />
+    <label for="rotation">Kąt rotacji</label>
+    <input
+      type="number"
+      min="0"
+      max="360"
+      name="rotation"
+      id="rotation"
+      placeholder="Kąt rotacji"
+      value="60"
+    />
+    <label for="iterations">Liczba iteracji</label>
+    <input
+      type="number"
+      min="0"
+      name="iterations"
+      id="iterations"
+      placeholder="Liczba iteracji"
+      value="5"
+    />
+    <br />
+    <button id="drawButton">Rysuj</button>
+  </body>
+  <script src="l-system.js"></script>
+</html>
